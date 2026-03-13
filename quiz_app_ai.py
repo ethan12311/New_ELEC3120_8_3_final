@@ -3,7 +3,7 @@ ELEC3120 Network Learning Hub - AI Enhanced Version with VLM & PDF Support
 Students can now upload diagram images AND PDF documents for analysis!
 """
 
-from flask import Flask, render_template_string, request, jsonify
+from fastapi import FastAPI, render_template_string, request, jsonify
 import json
 import re
 import requests
@@ -20,7 +20,7 @@ class AIStatusResponse(BaseModel):
     available: bool
     vlm: bool
     pdf: bool
-app = Flask(__name__)
+app = FastAPI()
 
 # ============================================================
 # CONFIGURATION
