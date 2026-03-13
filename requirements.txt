@@ -23,3 +23,5 @@ pydantic-settings==2.1.0
 
 # Image processing (optional, for future enhancements)
 Pillow==11.0.0
+
+gunicorn==23.0.0
