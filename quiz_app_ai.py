@@ -6,16 +6,18 @@ import json
 import re
 import requests
 import uuid
+import uvicorn
+import os
 from datetime import datetime
 from pydantic import BaseModel
 from typing import List, Optional
-import uvicorn
+
 
 # ============================================================
 # CONFIGURATION
 # ============================================================
 
-AI_BACKEND_URL = "http://localhost:8000"
+AI_BACKEND_URL = os.getenv("AI_BACKEND_URL", "http://localhost:8000")
 USE_AI_BACKEND = True
 
 # ============================================================
