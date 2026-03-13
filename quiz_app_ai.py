@@ -10,6 +10,16 @@ import requests
 import uuid
 from datetime import datetime
 
+from pydantic import BaseModel
+from typing import List
+
+class RootResponse(BaseModel):
+    features: List[str]
+
+class AIStatusResponse(BaseModel):
+    available: bool
+    vlm: bool
+    pdf: bool
 app = Flask(__name__)
 
 # ============================================================
